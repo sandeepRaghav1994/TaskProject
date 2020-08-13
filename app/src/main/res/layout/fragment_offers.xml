@@ -1,0 +1,163 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="bcr.Covid.view.MainActivity">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vm"
+            type="bcr.Covid.viewmodel.OffersViewModel"/>
+    </data>
+
+<!--android:weightSum="10"-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- android:layout_weight="4"-->
+            <LinearLayout
+                android:weightSum="10"
+
+                android:layout_width="wrap_content"
+                android:layout_height="210dp"
+                android:orientation="vertical">
+                <android.support.v4.view.ViewPager
+                    android:layout_weight="9.2"
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_weight=".8"
+                    android:id="@+id/SliderDots"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <!-- android:onClick="@{(view) -> vm.onMapClick()}"-->
+                <Button
+                    android:id="@+id/map"
+
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                    android:background="@drawable/round_corners"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="map"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!--    android:onClick="@{(view) -> vm.onCallClick()}"-->
+                <Button
+                    android:id="@+id/call"
+
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:drawableLeft="@drawable/ic_call_black_24dp"
+                    android:background="@drawable/round_corners"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_centerInParent="true"
+                    android:text="call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!--  android:onClick="@{(view) -> vm.onMenuClick()}"-->
+                <Button
+                    android:id="@+id/menu"
+
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:drawableLeft="@drawable/ic_menu_black_24dp"
+                    android:background="@drawable/round_corners"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginRight="3dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <!--<LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">-->
+            <!--android:layout_weight="1"-->
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/d1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/img"
+                    android:layout_marginLeft="5dp"
+                    android:text="Coupons"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"/>
+            </FrameLayout>
+
+            <!--
+                    </LinearLayout>-->
+            <!--<ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5">-->
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/repos_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/vertical_margin_half"
+                    android:paddingTop="@dimen/vertical_margin_half"
+                    android:scrollbars="vertical"
+
+                    tools:listitem="@layout/item_repo"/>
+
+            </LinearLayout>
+            <!--</ScrollView>-->
+
+            <!--<ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/splash"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />-->
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</layout>
