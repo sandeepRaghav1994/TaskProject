@@ -19,6 +19,7 @@ import bcr.Covid.model.Cupons
 
 class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.ItemViewHolder>() {
 
+
     private var cupons: ArrayList<Cupons> = ArrayList<Cupons>()
 
 
