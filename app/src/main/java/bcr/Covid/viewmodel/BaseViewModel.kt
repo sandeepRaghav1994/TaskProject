@@ -1,11 +1,13 @@
 package bcr.Covid.viewmodel
 
+import android.arch.lifecycle.ViewModel
+
 /**
  * Created by sandeep on 8/8/20.
  */
 
-interface BaseViewModel{
+abstract class BaseViewModel:ViewModel(){
 
-    fun destroy()
+  abstract  fun destroy()
 
 }

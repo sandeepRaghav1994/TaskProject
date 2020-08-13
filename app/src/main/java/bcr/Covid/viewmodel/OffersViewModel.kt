@@ -7,7 +7,7 @@ import android.content.Context
  */
 
 
-class OffersViewModel(var context: Context?, var offersListener: OffersListener): BaseViewModel{
+class OffersViewModel(var context: Context?, var offersListener: OffersListener): BaseViewModel(){
 
 
 

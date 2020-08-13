@@ -14,7 +14,7 @@ import io.reactivex.observers.DisposableObserver
  */
 
 
-class MainViewModel(var context: Context?, var repositoryListener: RepositoryListener): BaseViewModel, MainRepository.DataListener {
+class MainViewModel(var context: Context?, var repositoryListener: RepositoryListener): BaseViewModel(), MainRepository.DataListener {
 
     interface RepositoryListener {
 

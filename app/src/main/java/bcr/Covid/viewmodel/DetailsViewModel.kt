@@ -7,7 +7,7 @@ import android.content.Context
  */
 
 
-class DetailsViewModel(var context: Context?): BaseViewModel{
+class DetailsViewModel(var context: Context?): BaseViewModel(){
 
 
 
